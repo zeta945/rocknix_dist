@@ -33,6 +33,8 @@ jobs:
             project: Allwinner
           - device: SM8250
             project: Qualcomm
+          - device: SM8550
+            project: Qualcomm
     uses: ./.github/workflows/build-device.yml
     secrets: inherit
     with:
