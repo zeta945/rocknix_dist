@@ -42,19 +42,13 @@ led_state rgb:kbd_backlight 1
 
 # Construct the payload
 PAYLOAD=$(printf '\\x%02X\\x%02X' $LED_MODE $BRIGHTNESS)
-for ((i = 0; i < 8; i++)); do
-  PAYLOAD+=$(printf '\\x%02X\\x%02X\\x%02X' $RIGHT_RED $RIGHT_GREEN $RIGHT_BLUE)
-done
-for ((i = 0; i < 8; i++)); do
+for ((i = 0; i < 16; i++)); do
   PAYLOAD+=$(printf '\\x%02X\\x%02X\\x%02X' $LEFT_RED $LEFT_GREEN $LEFT_BLUE)
 done
 
 # Calculate checksum for the payload
 PAYLOAD_BYTES=($LED_MODE $BRIGHTNESS)
-for ((i = 0; i < 8; i++)); do
-  PAYLOAD_BYTES+=($RIGHT_RED $RIGHT_GREEN $RIGHT_BLUE)
-done
-for ((i = 0; i < 8; i++)); do
+for ((i = 0; i < 16; i++)); do
   PAYLOAD_BYTES+=($LEFT_RED $LEFT_GREEN $LEFT_BLUE)
 done
 CHECKSUM=$(calculate_checksum "${PAYLOAD_BYTES[@]}")
