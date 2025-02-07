@@ -48,7 +48,7 @@ rsync -a /usr/config/modules/* /storage/.config/modules/
 cp -f /usr/config/retroarch/retroarch-core-options.cfg /storage/.config/retroarch/retroarch-core-options.cfg
 
 ### Apply developer ssh keys if they exist
-sed -i '/video_threaded =/c\video_threaded = "false"' /storage/.config/retroarch.cfgecho "Apply dev keys if available..." >>${LOG}
+echo "Apply dev keys if available..." >>${LOG}
 if [ -e /usr/config/ssh/authorized_keys ]
 then
   tocon "Update developer keys..."
