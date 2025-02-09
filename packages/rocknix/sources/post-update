@@ -166,3 +166,7 @@ fi
 if [ "${HW_DEVICE}" = "RK3588" ]; then
   rm -f /storage/.config/lime3ds/sdl2-config.ini
 fi
+
+# set the default global.bezel if it doesn't already exist
+grep -q "^global\.bezel=" /storage/.config/system/configs/system.cfg ||
+  sed -i '$ a\global.bezel=thebezelproject' /storage/.config/system/configs/system.cfg
