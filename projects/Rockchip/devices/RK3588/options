@@ -74,7 +74,7 @@
   # additional Firmware to use ( )
   # Space separated list is supported,
   # e.g. FIRMWARE=""
-    FIRMWARE="ap6256-firmware g610-mali-csffw iwlwifi-firmware ibt-firmware"
+    FIRMWARE="ap6256-firmware ap6611s-firmware g610-mali-csffw iwlwifi-firmware ibt-firmware"
 
   # debug tty path
     DEBUG_TTY="/dev/ttyFIQ0"
