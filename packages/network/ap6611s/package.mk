@@ -14,4 +14,5 @@ PKG_TOOLCHAIN="manual"
 makeinstall_target() {
   mkdir -p ${INSTALL}/usr/bin
   cp ${PKG_DIR}/bin/brcm_patchram_plus_rk3399 ${INSTALL}/usr/bin
+  chmod +x ${INSTALL}/usr/bin/brcm_patchram_plus_rk3399
 }

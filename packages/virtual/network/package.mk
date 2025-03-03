@@ -12,7 +12,7 @@ PKG_SECTION="virtual"
 PKG_LONGDESC="Metapackage for various packages to install network support"
 
 if [ "${BLUETOOTH_SUPPORT}" = "yes" ]; then
-  PKG_DEPENDS_TARGET="${PKG_DEPENDS_TARGET} pygobject bluez ap6611s"
+  PKG_DEPENDS_TARGET="${PKG_DEPENDS_TARGET} pygobject bluez"
 fi
 
 if [ "${SAMBA_SERVER}" = "yes" ] || [ "$SAMBA_SUPPORT" = "yes" ]; then
