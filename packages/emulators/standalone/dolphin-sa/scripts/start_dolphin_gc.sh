@@ -220,7 +220,7 @@ fi
     sed -i '/InternalResolution/c\InternalResolution = 2' /storage/.config/dolphin-emu/GFX.ini
   fi
 
-  # Skip Bios
+  # Save Type
   if [ "$SAVETYPE" = "8" ]; then
     sed -i '/SlotA/c\SlotA = 8' /storage/.config/dolphin-emu/Dolphin.ini
   else
