@@ -829,7 +829,7 @@ jobs:
         with:
           use-btrfs: true
           root-reserve-mb: 4096
-          swap-size-mb: 100
+          swap-size-mb: 4096
           overprovision-lvm: true
           remove-dotnet: "true"
           remove-android: "true"
